@@ -2,26 +2,74 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Doomed Drinks</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/style.css">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Doomed Drinks</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/style.css">
+
 </head>
 
 <body>
-    <h1>Goodbye, world!</h1>
-    <select class="form-select" id="diameterSelect" aria-label="Default select example">
-        <option selected>Miles in diameter</option>
+
+  <center>
+    <h1>Goodbye, World! Doomed Drinks</h1>
+  </center>
+  <center>
+    <h1>Best Cocktail Pairings with Asteroids</h1>
+  </center>
+
+
+
+
+  <nav>Recipes and Asteroid Stats
+    <h2>Asteroid Info</h2>
+    <span>
+      <ul style="list-style-type: none; display: inline-block;">
+        <li>Name</li>
+        <li>Size</li>
+        <li>Realitive Velocity</li>
+      </ul>
+
+      <ul style="list-style-type: none; display: inline-block;">
+        <h3>Drink Info</h3>
+        <li>Name</li>
+        <li>Ingredients</li>
+        <li>Recipe</li>
+      </ul>
+    </span>
+  </nav>
+  <select class="form-select" id="diameterSelect" aria-label="Default select example">
+    <option selected>Miles in diameter</option>
+</select>
+<select class="form-select" id="velocitySelect" aria-label="Default select example">
+    <option selected>Relative Velocity</option>
+</select>
+
+  <div class="container">
+    <select class="form-select" id="spiritSelector" aria-label="Default select example">
+      <option selected>Type of spirit</option>
+
     </select>
-    <select class="form-select" id="velocitySelect" aria-label="Default select example">
-        <option selected>Relative Velocity</option>
+
+    <select class="form-select" id="glassSelector" aria-label="Default select example">
+      <option selected>Type of glass</option>
+
     </select>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-        crossorigin="anonymous"></script>
-    <script src="./assets/script.js"></script>
+
+    <select class="form-select" id="typeSelector" aria-label="Default select example">
+      <option selected>Type of drink</option>
+
+    </select>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+  <script src="assets/script.js"></script>
+
 </body>
 
 </html>
