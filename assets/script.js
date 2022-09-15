@@ -10,12 +10,24 @@ fetch(`https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=DEMO_KEY`)
 .then(function (response) {
     return response.json();
   })
-  .then(function (data) {
-    console.log(data);
-    diameter= data.near_earth_objects[0].estimated_diameter.miles.estimated_diameter_max
+  .then(({ near_earth_objects }) => {
+    // console.log(data);
+    // // diameter = data.near_earth_objects[0].estimated_diameter.miles.estimated_diameter_max
+    // console.log(diameter)
+    for (var i = 0; i < near_earth_objects.length; i++) {
+      let diameter = near_earth_objects[i].estimated_diameter.miles.estimated_diameter_max;
+      var opt = document.createElement("option");
+      opt.textContent = diameter;
+      opt.setAttribute("value", i);
+      diameterSelect.appendChild(opt);
+      console.log(diameter)
+    }
+  })
+    // console.log(data);
+    // diameter= data.near_earth_objects[0].estimated_diameter.miles.estimated_diameter_max
 
-    console.log(diameter)
-  });
+    
+  
   
   fetch(`https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=DEMO_KEY`)
 .then(function (response) {
@@ -53,7 +65,6 @@ fetch(`https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=DEMO_KEY`)
 
 
 
-
 // create an element; set the text to be miles; append in the diameterSelect/// for loop//
 
 
@@ -74,8 +85,8 @@ let drinkOptions;
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': 'ddab6d3de4msh52dd0d341489032p14c714jsn77846584eadc',
-        'X-RapidAPI-Host': 'the-cocktail-db.p.rapidapi.com'
+        // 'X-RapidAPI-Key': 'ddab6d3de4msh52dd0d341489032p14c714jsn77846584eadc',
+        // 'X-RapidAPI-Host': 'the-cocktail-db.p.rapidapi.com'
     }
 };
 
