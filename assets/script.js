@@ -1,64 +1,64 @@
-let diameter;
-let velocity;
-let neoName;
-let neoMissDist;
-let diameterSelect = document.querySelector("#diameterSelect")
-let velocitySelect = document.querySelector("#velocitySelect")
+// let diameter;
+// let velocity;
+// let neoName;
+// let neoMissDist;
+// let diameterSelect = document.querySelector("#diameterSelect")
+// let velocitySelect = document.querySelector("#velocitySelect")
 
 
-fetch(`https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=DEMO_KEY`)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(({ near_earth_objects }) => {
-    // console.log(data);
-    // // diameter = data.near_earth_objects[0].estimated_diameter.miles.estimated_diameter_max
-    // console.log(diameter)
+// fetch(`https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=DEMO_KEY`)
+//   .then(function (response) {
+//     return response.json();
+//   })
+//   .then(({ near_earth_objects }) => {
+//     // console.log(data);
+//     // // diameter = data.near_earth_objects[0].estimated_diameter.miles.estimated_diameter_max
+//     // console.log(diameter)
 
-    for (var i = 0; i < near_earth_objects.length; i++) {
+//     for (var i = 0; i < near_earth_objects.length; i++) {
 
-      let diameter = near_earth_objects[i].estimated_diameter_max;
-      var opt = document.createElement("option");
-      opt.textContent = diameter;
-      opt.setAttribute("value", i);
+//       let diameter = near_earth_objects[i].estimated_diameter_max;
+//       var opt = document.createElement("option");
+//       opt.textContent = diameter;
+//       opt.setAttribute("value", i);
 
-      diameterSelect.appendChild(opt);
-    }
+//       diameterSelect.appendChild(opt);
+//     }
 
-  });
+//   });
 
-fetch(`https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=DEMO_KEY`)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data);
-    velocity = data.near_earth_objects[0].close_approach_data[0].relative_velocity.miles_per_hour
+// fetch(`https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=DEMO_KEY`)
+//   .then(function (response) {
+//     return response.json();
+//   })
+//   .then(function (data) {
+//     console.log(data);
+//     velocity = data.near_earth_objects[0].close_approach_data[0].relative_velocity.miles_per_hour
 
-    console.log(velocity)
-  });
+//     console.log(velocity)
+//   });
 
-fetch(`https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=DEMO_KEY`)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data);
-    neoName = data.near_earth_objects[0].name
+// fetch(`https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=DEMO_KEY`)
+//   .then(function (response) {
+//     return response.json();
+//   })
+//   .then(function (data) {
+//     console.log(data);
+//     neoName = data.near_earth_objects[0].name
 
-    console.log(neoName)
-  });
+//     console.log(neoName)
+//   });
 
-fetch(`https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=DEMO_KEY`)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data);
-    neoMissDist = data.near_earth_objects[0].close_approach_data[0].miss_distance.miles
+// fetch(`https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=DEMO_KEY`)
+//   .then(function (response) {
+//     return response.json();
+//   })
+//   .then(function (data) {
+//     console.log(data);
+//     neoMissDist = data.near_earth_objects[0].close_approach_data[0].miss_distance.miles
 
-    console.log(neoMissDist)
-  });
+//     console.log(neoMissDist)
+//   });
 
 
 
@@ -72,13 +72,11 @@ fetch(`https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=DEMO_KEY`)
 // temp1.near_earth_objects[0].name//
 // temp1.near_earth_objects[0].close_approach_data[0].miss_distance.miles//
 
-let drinkName = "whiskey"
-let glassType = "Cocktail_glass"
-let drinkType = "shot"
 
 let spiritSelector = document.querySelector("#spiritSelector");
 let glassSelector = document.querySelector("#glassSelector");
 let typeSelector = document.querySelector("#typeSelector");
+
 
 let drinkOptions;
 let glassOptions;
@@ -92,35 +90,17 @@ const options = {
   }
 };
 
-fetch(`https://the-cocktail-db.p.rapidapi.com/search.php?i=${drinkName}`, options)
-  .then(response => response.json())
-  .then(response => console.log("drinkName", response))
-  .catch(err => console.error(err));
-
-fetch(`https://the-cocktail-db.p.rapidapi.com/filter.php?g=${glassType}`, options)
-  .then(response => response.json())
-  .then(response => console.log("glassType", response))
-  .catch(err => console.error(err));
-
-fetch(`https://the-cocktail-db.p.rapidapi.com/filter.php?c=${drinkType}`, options)
-  .then(response => response.json())
-  .then(response => console.log("drinkType", response))
-  .catch(err => console.error(err));
-
-
-
-
+// fills out alcohol selector drop downs
 fetch(`https://the-cocktail-db.p.rapidapi.com/list.php?i=list`, options)
   .then(response => response.json())
-
   .then(({ drinks }) => {
-    console.log("ingredient list", drinks)
+    // console.log("ingredient list", drinks)
     for (var i = 0; i < drinks.length; i++) {
 
       let drinkOptions = drinks[i].strIngredient1;
       var opt = document.createElement("option");
       opt.textContent = drinkOptions;
-      opt.setAttribute("value", i);
+      opt.setAttribute("value", drinkOptions);
 
       spiritSelector.appendChild(opt);
     }
@@ -131,13 +111,13 @@ fetch(`https://the-cocktail-db.p.rapidapi.com/list.php?i=list`, options)
 fetch(`https://the-cocktail-db.p.rapidapi.com/list.php?g=list`, options)
   .then(response => response.json())
   .then(({ drinks }) => {
-    console.log("glass list", drinks)
+    // console.log("glass list", drinks)
     for (var i = 0; i < drinks.length; i++) {
 
       let glassOptions = drinks[i].strGlass;
       var opt = document.createElement("option");
       opt.textContent = glassOptions;
-      opt.setAttribute("value", i);
+      opt.setAttribute("value", glassOptions);
 
       glassSelector.appendChild(opt);
     }
@@ -147,15 +127,62 @@ fetch(`https://the-cocktail-db.p.rapidapi.com/list.php?g=list`, options)
 fetch(`https://the-cocktail-db.p.rapidapi.com/list.php?c=list`, options)
   .then(response => response.json())
   .then(({ drinks }) => {
-    console.log("cocktail type list", drinks)
+    // console.log("cocktail type list", drinks)
     for (var i = 0; i < drinks.length; i++) {
 
       let typeOptions = drinks[i].strCategory;
       var opt = document.createElement("option");
       opt.textContent = typeOptions;
-      opt.setAttribute("value", i);
+      opt.setAttribute("value", typeOptions);
 
       typeSelector.appendChild(opt);
     }
   })
   .catch(err => console.error(err));
+
+// let drinkName = select.options[select.drinkOptions].text;
+// let glassType = select.options[select.glassOptions].text;
+// let drinkType = select.options[select.typeOptions].text;
+
+let drinkType
+
+spiritSelector.addEventListener("change", function (event) {
+  console.log(event.target.value)
+  let drinkName = event.target.value
+
+  fetch(`https://the-cocktail-db.p.rapidapi.com/search.php?i=${drinkName}`, options)
+    .then(response => response.json())
+    .then(response => console.log("drinkName", response))
+    .catch(err => console.error(err));
+
+})
+
+glassSelector.addEventListener("change", function (event) {
+  console.log(event.target.value)
+  let glassType = event.target.value
+
+  fetch(`https://the-cocktail-db.p.rapidapi.com/filter.php?g=${glassType}`, options)
+    .then(response => response.json())
+    .then(response => console.log("glassType", response))
+    .catch(err => console.error(err));
+  
+})
+
+typeSelector.addEventListener("change", function (event) {
+  console.log(event.target.value)
+  let drinkType = event.target.value
+
+  fetch(`https://the-cocktail-db.p.rapidapi.com/filter.php?c=${drinkType}`, options)
+  .then(response => response.json())
+  .then(response => console.log("drinkType", response))
+  .catch(err => console.error(err));
+ 
+  
+})
+
+// fetch(`www.thecocktaildb.com/api/json/v1/1/list.php?a=list`)
+
+// fetch(`https://the-cocktail-db.p.rapidapi.com/list.php?c=list`, options)
+// .then(response => response.json())
+// .then(response => console.log("c list", response))
+// .catch(err => console.error(err));
