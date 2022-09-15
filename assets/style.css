@@ -1,7 +1,18 @@
 nav {
   background-color: lightgrey;
-  width: 300px;
+  width: 600px;
   border: 15px solid rgb(32, 0, 128);
-  padding: 50px;
-  margin: 20px;
+  padding: 30px;
+  margin: 40px;
 }
+
+h3 {
+  display:inline;
+  float:left;
+  }
+
+h4 {
+  display:inline;
+  float:right;
+  }
+
