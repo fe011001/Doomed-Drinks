@@ -124,8 +124,8 @@ const options = {
 
   method: 'GET',
   headers: {
-    'X-RapidAPI-Key': 'ddab6d3de4msh52dd0d341489032p14c714jsn77846584eadc',
-    'X-RapidAPI-Host': 'the-cocktail-db.p.rapidapi.com'
+   'X-RapidAPI-Key': 'ddab6d3de4msh52dd0d341489032p14c714jsn77846584eadc',
+   'X-RapidAPI-Host': 'the-cocktail-db.p.rapidapi.com'
   }
 
 };
