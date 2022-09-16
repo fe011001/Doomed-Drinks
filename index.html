@@ -21,12 +21,13 @@
     <h1>Best Cocktail Pairings with Asteroids</h1>
   </center>
 
-
-
-
-  <nav>
-    <center><h2>Recipes and Asteroid Stats</h2></center>
+  
+    <nav id="testingContainer">
+    <center>
+      <h2>Recipes and Asteroid Stats</h2>
+    </center>
     <h3>Asteroid Info</h3>
+
     
       <ul style="list-style-type: none; display: inline-block;">
         <li>Name: <span id="asteroidName"></span></li>
@@ -34,12 +35,12 @@
         <li>Relative Velocity in MPH: <span id="asteroidVelocity"></span></li>
       </ul>
 
-      <ul style="list-style-type: none; display: inline-block;">
-        <h4>Drink Info</h4>
-        <li>Name</li>
-        <li>Ingredients</li>
-        <li>Recipe</li>
-      </ul>
+    <ul style="list-style-type: none; display: inline-block;">
+      <h4>Drink Info</h4>
+      <li>Name <span id="selectedDrinkName"></span></li>
+      <li>Ingredients <span id="selectedIng"></span></li>
+      <li>Picture <img src="" id="selectedPic"></img></li>
+    </ul>
   </nav>
   <!-- <select class= "container"></select> -->
   <select class= "form-select" id="diameterSelect" aria-label="Default select example">
@@ -49,27 +50,21 @@
     <option selected>Relative Velocity in MPH</option>
 </select> -->
 
-  <div class="container">
-    <select class="form-select" id="spiritSelector" aria-label="Default select example">
-      <option selected>Type of spirit</option>
+    <div class="card border-primary mb-3" style="max-width: 18rem;">
+      <div class="card-body">
+      </div>
+      <div class="container">
+        <select class="form-select" id="spiritSelector" aria-label="Default select example">
+          <option selected>Type of spirit</option>
 
-    </select>
+        </select>
+      </div>
 
-    <select class="form-select" id="glassSelector" aria-label="Default select example">
-      <option selected>Type of glass</option>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+      <script src="assets/script.js"></script>
 
-    </select>
-
-    <select class="form-select" id="typeSelector" aria-label="Default select example">
-      <option selected>Type of drink</option>
-
-    </select>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-    crossorigin="anonymous"></script>
-  <script src="assets/script.js"></script>
 
 </body>
 

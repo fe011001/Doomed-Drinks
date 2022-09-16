@@ -1,3 +1,16 @@
+html * {
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+
+
+
+h1 {
+  color: aqua;
+
+}
+
 nav {
   background-color: lightgrey;
   width: 600px;
@@ -16,3 +29,13 @@ h4 {
   float:right;
   }
 
+  body{
+    background-image: url('https://media.giphy.com/media/QCX3rhmaNrc7j8fqs3/giphy.gif');
+    background-size: center;
+    
+    
+    
+    height: 100vh;
+    padding:0;
+    margin:0;
+}
