@@ -48,7 +48,7 @@ fetch(`https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=JUfSdghhaVFtaCtdpedGH
             var opt = document.createElement("option");
             opt.textContent = velocity;
             opt.setAttribute("value", velocity);
-            velocitySelect.appendChild(opt);
+            // velocitySelect.appendChild(opt);
             // console.log(velocity)
         }
     
