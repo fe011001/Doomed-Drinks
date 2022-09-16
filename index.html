@@ -28,11 +28,12 @@
     </center>
     <h3>Asteroid Info</h3>
 
-    <ul style="list-style-type: none; display: inline-block;">
-      <li>Name</li>
-      <li>Size</li>
-      <li>Relative Velocity in MPH</li>
-    </ul>
+    
+      <ul style="list-style-type: none; display: inline-block;">
+        <li>Name: <span id="asteroidName"></span></li>
+        <li>Size: <span id="asteroidSize"></span></li>
+        <li>Relative Velocity in MPH: <span id="asteroidVelocity"></span></li>
+      </ul>
 
     <ul style="list-style-type: none; display: inline-block;">
       <h4>Drink Info</h4>
@@ -41,15 +42,13 @@
       <li>Picture <img src="" id="selectedPic"></img></li>
     </ul>
   </nav>
-  <div class="card border-primary mb-3" style="max-width: 18rem;">
-    <div class= "card-body">
-      <select class="form-select" id="diameterSelect" aria-label="Default select example">
-        <option selected>Miles in diameter</option>
-      </select>
-      <select class="form-select" id="velocitySelect" aria-label="Default select example">
-        <option selected>Relative Velocity in MPH</option>
-      </select>
-    </div>
+  <!-- <select class= "container"></select> -->
+  <select class= "form-select" id="diameterSelect" aria-label="Default select example">
+    <option selected>Miles in diameter</option>
+</select>
+<!-- <select class="form-select" id="velocitySelect" aria-label="Default select example">
+    <option selected>Relative Velocity in MPH</option>
+</select> -->
 
     <div class="card border-primary mb-3" style="max-width: 18rem;">
       <div class="card-body">
