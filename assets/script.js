@@ -4,9 +4,6 @@ let neoName;
 let neoMissDist;
 let diameterSelect = document.querySelector("#diameterSelect")
 let velocitySelect = document.querySelector("#velocitySelect")
-let asteroidName = document.querySelector("#asteroidName")
-let asteroidSize = document.querySelector("#asteroidSize")
-let asteroidVelocity = document.querySelector("#asteroidVelocity")
 let diameterDataArray = []
 
 let testingContainerLS = localStorage.getItem("lastPick"); 
@@ -16,6 +13,9 @@ if (localStorage.getItem("lastPick")){
   testingContainer.innerHTML = JSON.parse(testingContainerLS)
 }
 
+let asteroidName = document.querySelector("#asteroidName")
+let asteroidSize = document.querySelector("#asteroidSize")
+let asteroidVelocity = document.querySelector("#asteroidVelocity")
 
 fetch(`https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=JUfSdghhaVFtaCtdpedGHFBW1jh6M4409rWR0Nn1`)
     .then(function (response) {
