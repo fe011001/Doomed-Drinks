@@ -21,10 +21,8 @@
     <h1>Best Cocktail Pairings with Asteroids</h1>
   </center>
 
-
-
-
-  <nav>
+  
+    <nav id="testingContainer">
     <center>
       <h2>Recipes and Asteroid Stats</h2>
     </center>
@@ -38,9 +36,9 @@
 
     <ul style="list-style-type: none; display: inline-block;">
       <h4>Drink Info</h4>
-      <li>Name</li>
-      <li>Picture</li>
-      <li>Recipe</li>
+      <li>Name <span id="selectedDrinkName"></span></li>
+      <li>Ingredients <span id="selectedIng"></span></li>
+      <li>Picture <img src="" id="selectedPic"></img></li>
     </ul>
   </nav>
   <div class="card border-primary mb-3" style="max-width: 18rem;">
@@ -61,22 +59,13 @@
           <option selected>Type of spirit</option>
 
         </select>
-
-        <select class="form-select" id="glassSelector" aria-label="Default select example">
-          <option selected>Type of glass</option>
-
-        </select>
-
-        <select class="form-select" id="typeSelector" aria-label="Default select example">
-          <option selected>Type of drink</option>
-
-        </select>
       </div>
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
       <script src="assets/script.js"></script>
+
 
 </body>
 
