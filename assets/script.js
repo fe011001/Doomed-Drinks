@@ -142,6 +142,8 @@ let selectedDrinkName = document.querySelector('#selectedDrinkName');
 let selectedIng = document.querySelector('#selectedIng');
 let selectedPic = document.querySelector('#selectedPic')
 
+let drinks = ["vodka", "gin", "Rum", "Tequila", "Scotch",  "Whiskey", "Whisky", "Ale", "Almond", "amaretto", "anis", "aperol", "apple cider", "apple", "applejack", "apricot","bacardi", "banana", "basil", "beer", "blueberry", "brandy", "butter", "campari", "cantaloup", "champagne", "cherry","chocolate", "cider", "citrus", "cocoa", "coconut", "coffee", "corona", "cranberry", "cream", "creme", "daiquiri", "dr. pepper", "egg", "espresso", "fruit", "gingerale", "gold",  "grape", "green", "guinness", "honey", "hot", "ice", "irish", "jack", "jello", "jelly", "jim", "kahlua", "kiwi", "kool-aid", "lemon", "light", "lime", "mango", "margarita", "martini", "melon", "mezcal", "milk", "mint", "orange", "oreo", "papaya",
+"passion", "peach", "pina colada", "pineapple", "port", "raspberry", "root beer", "rose", "salt", "sherry", "sour", "strawberry", "sunny", "surge", "sweet", "tang", "tea", "tomato", "tonic", "vanilla", "water", "white", "wine", "zima"]
 
 let drinkOptions;
 let glassOptions;
@@ -162,23 +164,22 @@ const options = {
 
 };
 
-// fills out alcohol selector drop downs
-fetch(`https://the-cocktail-db.p.rapidapi.com/list.php?i=list`, options)
-  .then(response => response.json())
-  .then(({ drinks }) => {
-    // console.log("ingredient list", drinks)
-    for (var i = 0; i < drinks.length; i++) {
+// filled out alcohol selector drop downs until realized API was trash
+// fetch(`https://the-cocktail-db.p.rapidapi.com/list.php?i=list`, options)
+//   .then(response => response.json())
+//   .then(({ drinks }) => {
+//     // console.log("ingredient list", drinks)
+//     for (var i = 0; i < drinks.length; i++) {
 
-      let drinkOptions = drinks[i].strIngredient1;
-      var opt = document.createElement("option");
-      opt.textContent = drinkOptions;
-      opt.setAttribute("value", drinkOptions);
+//       let drinkOptions = drinks[i].strIngredient1;
+//       var opt = document.createElement("option");
+//       opt.textContent = drinkOptions;
+//       opt.setAttribute("value", drinkOptions);
 
-      spiritSelector.appendChild(opt);
-    }
-  })
-  .catch(err => console.error(err))
-
+//       spiritSelector.appendChild(opt);
+//     }
+//   })
+//   .catch(err => console.error(err))
 
 // fetch(`https://the-cocktail-db.p.rapidapi.com/list.php?g=list`, options)
 //   .then(response => response.json())
@@ -212,6 +213,15 @@ fetch(`https://the-cocktail-db.p.rapidapi.com/list.php?i=list`, options)
 //   })
 //   .catch(err => console.error(err));
 
+
+for (var i = 0; i < drinks.length; i++) {
+
+        let drinkOptions = drinks[i];
+        var opt = document.createElement("option");
+        opt.textContent = drinkOptions;
+        opt.setAttribute("value", drinkOptions);
+  
+        spiritSelector.appendChild(opt);}
 
 spiritSelector.addEventListener("change", function (event) {
   // console.log(event.target.value)
