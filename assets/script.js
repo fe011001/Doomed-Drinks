@@ -116,6 +116,7 @@ diameterSelect.addEventListener("change", function (event) {
       
     }
     
+    localStorage.setItem("lastPick", JSON.stringify(document.querySelector("#testingContainer").innerHTML))
 
     // console.log(event.target.dataset.vel)
 
@@ -267,7 +268,8 @@ spiritSelector.addEventListener("change", function (event) {
     })
     
     .catch(err => console.error(err));
-  
+    
+    localStorage.setItem("lastPick", JSON.stringify(document.querySelector("#testingContainer").innerHTML))
 // console.log(testingContainer)
 
     // selectedPic.textContent = selectedDrink.strDrinkThumb;
