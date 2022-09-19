@@ -16,6 +16,11 @@ h1 {
 
 }
 
+h2{
+  text-align:center;
+  margin-bottom: auto;
+}
+
 #testingContainer {
   background-color: lightgrey;
   width: 750px;
