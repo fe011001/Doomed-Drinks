@@ -14,62 +14,67 @@
 
 <body>
 
-  
-    <h1>Doomed Drinks</h1>
-    <h1>Best Cocktail Pairings with Asteroids</h1>
-    <h1>Goodbye World!</h1>
+
+  <h1>Doomed Drinks</h1>
+  <h1>Best Cocktail Pairings with Asteroids</h1>
+  <h1>Goodbye World!</h1>
 
   <div class="d-flex justify-content-evenly">
     <div class="card info-card" style="max-width: 18rem; max-height: 10rem;">
       <div class="card-body">
         <p class="fw-bold" style="color:rgb(50, 10, 119) ;">Select an Asteroid by it's diameter.</p>
-        <select class= "form-select" id="diameterSelect" aria-label="Default select example">
+        <select class="form-select" id="diameterSelect" aria-label="Default select example">
           <option selected>Miles in diameter</option>
         </select>
       </div>
     </div>
 
-  <div id="testingContainer">
-      <h2>Recipes and Asteroid Stats</h2>
-    <h3>Asteroid Info</h3>
-    
-    
-    <ul style="list-style-type: none;">
-      <li>Name: <span id="asteroidName"></span></li>
-      <li>Size: <span id="asteroidSize"></span></li>
-      <li>Relative Velocity in MPH: <span id="asteroidVelocity"></span></li>
-    </ul>
-    
-    <h3>Drink Info</h3>
-    <ul style="list-style-type: none;">
-      <li>Name <span id="selectedDrinkName"></span></li>
-      <li>Ingredients <span id="selectedIng"></span></li>
-         <li>Picture </li>
-         <img src="" id="selectedPic"></img>
-       
-    </ul>
-  </div>
-  <!-- <select class= "container"></select> -->
-  <!-- <select class="form-select" id="velocitySelect" aria-label="Default select example">
+    <div id="testingContainer" class="row">
+      <h2 class="justify-content-center">Recipes and Asteroid Stats</h2>
+
+
+      <div class="col-6" style="list-style-type: none;">
+        <h3 class="col-12">Asteroid Info</h3>
+        <p>Name: <span id="asteroidName"></span></p>
+        <p>Size: <span id="asteroidSize"></span></p>
+        <p>Relative Velocity in MPH: <span id="asteroidVelocity"></span></p>
+      </div>
+
+      <div class="col-6" id="drinkInfo">
+        <h3 class="col-12">Drink Info</h3>
+        <p>Name: <span id="selectedDrinkName"></span></p>
+        <p>Ingredients: <span id="selectedIng"></span></p>
+        <p>Picture: </p>
+        <img src="" id="selectedPic"></img>
+
+      </div>
+
+
+
+    </div>
+    <!-- <select class= "container"></select> -->
+    <!-- <select class="form-select" id="velocitySelect" aria-label="Default select example">
     <option selected>Relative Velocity in MPH</option>
   </select> -->
-  
-  <div class="card info-card" style="max-width: 18rem; max-height: 10rem;">
-    <div class="card-body">
-      <div class="container">
-        <p class="fw-bold" style="color:rgb(50, 10, 119)";> Select a base ingredient for your drinks.</p>
-        <select class="form-select" id="spiritSelector" aria-label="Default select example">
 
-          <option selected>Type of spirit</option>
-          
+    <div class="card info-card" style="max-width: 18rem; max-height: 10rem;">
+      <div class="card-body">
+        <div class="container">
+          <p class="fw-bold" style="color:rgb(50, 10, 119)" ;> Select a base ingredient for your drinks.</p>
+          <select class="form-select" id="spiritSelector" aria-label="Default select example">
+
+            <option selected>Type of spirit</option>
+
           </select>
         </div>
       </div>
-    </div>  
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-        crossorigin="anonymous"></script>
-      <script src="assets/script.js"></script>
+    </div>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+  <script src="assets/script.js"></script>
 
 
 </body>
